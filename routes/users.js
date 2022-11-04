@@ -7,7 +7,7 @@ const {
   userValidate,
 } = require('../middlewares/validation');
 
-router.get('/me', getCurrentUser); // Get all users
+router.get('/me', getCurrentUser); // Get  users
 
 router.patch('/me', userValidate, updUsers); // Update user profile
 
