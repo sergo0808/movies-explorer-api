@@ -1,6 +1,6 @@
 const allowedCors = [
-  'http://mesto.frontend.sovickiy.nomoredomains.sbs',
-  'https://mesto.frontend.sovickiy.nomoredomains.sbs',
+  'https://api.films.sovickiy.nomoredomains.icu/',
+  'http://api.films.sovickiy.nomoredomains.icu/',
 ];
 
 const cors = (req, res, next) => {
