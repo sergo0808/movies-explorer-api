@@ -5,7 +5,6 @@ const ForbiddenError = require('../errors/ForbiddenError');
 
 const getMovie = (_, res, next) => {
   Movie.find({})
-    // .populate('likes')
     .then((movie) => res.send(movie))
     .catch(next);
 };

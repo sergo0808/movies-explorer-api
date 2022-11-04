@@ -1,6 +1,6 @@
 const allowedCors = [
-  'https://api.films.sovickiy.nomoredomains.icu/',
-  'http://api.films.sovickiy.nomoredomains.icu/',
+  'https://api.films.sovickiy.nomoredomains.icu',
+  'http://api.films.sovickiy.nomoredomains.icu',
 ];
 
 const cors = (req, res, next) => {
