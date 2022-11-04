@@ -61,11 +61,11 @@ const deleteMovie = (req, res, next) => {
       if (err.name === 'CastError') {
         next(
           new BadRequestError(
-            `Передан некорректны id: ${movieId} в методы удаления карточки`,
+            `Передан некорректны id: ${movieId} в методы удаления фильма`,
           ),
         );
       } else if (err.name === 'NotFoundError') {
-        next(new NotFoundError(`Карточка с id: ${movieId} не найдена`));
+        next(new NotFoundError(`Фильм с id: ${movieId} не найдена`));
       } else {
         next(err);
       }
