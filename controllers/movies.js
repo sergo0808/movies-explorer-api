@@ -48,13 +48,13 @@ const deleteMovie = (req, res, next) => {
 
   Movie.findById(movieId)
     .orFail(() => {
-      throw new NotFoundError(`Карточка с id: ${movieId} не найдена`);
+      throw new NotFoundError(`Фильм с id: ${movieId} не найдена`);
     })
     .then((movie) => {
       if (movie.owner.toString() === req.user._id) {
         Movie.findByIdAndRemove(movieId).then(() => res.send(movie));
       } else {
-        throw new ForbiddenError('Нельзя удалять чужие карточки');
+        throw new ForbiddenError('Нельзя удалять чужой фильм');
       }
     })
     .catch((err) => {
