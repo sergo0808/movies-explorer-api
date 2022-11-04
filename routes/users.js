@@ -1,13 +1,13 @@
 const router = require('express').Router();
 
 const {
-  getUsers, updUsers,
+  getCurrentUser, updUsers,
 } = require('../controllers/users');
 const {
   userValidate,
 } = require('../middlewares/validation');
 
-router.get('/me', getUsers); // Get all users
+router.get('/me', getCurrentUser); // Get all users
 
 router.patch('/me', userValidate, updUsers); // Update user profile
 
