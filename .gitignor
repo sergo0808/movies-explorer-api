@@ -1,7 +1,7 @@
 # Logs
 
 Logs
-.log
+*.log
 
 # dependencies
 
