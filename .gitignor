@@ -1,7 +1,9 @@
 # Logs
 
 logs
-.log
+
+error.log
+request.log
 
 # dependencies
 
@@ -31,3 +33,7 @@ build
 .idea
 .vscode
 .env
+
+```
+
+```
