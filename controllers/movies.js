@@ -12,7 +12,7 @@ const getMovie = (_, res, next) => {
 const createMovie = (req, res, next) => {
   const {
     country, director, duration, year, description, image, trailer, nameRU, nameEN, thumbnail,
-    movieId,
+
   } = req.body;
 
   Movie.create({
@@ -26,7 +26,6 @@ const createMovie = (req, res, next) => {
     nameRU,
     nameEN,
     thumbnail,
-    movieId,
   })
     .then((movie) => res.send(movie))
     .catch((err) => {
