@@ -11,7 +11,7 @@ const getMovie = (_, res, next) => {
 
 const createMovie = (req, res, next) => {
   const {
-    country, director, duration, year, description, image, trailer, nameRU, nameEN, thumbnail,
+    country, director, duration, year, description, image, trailerLink, nameRU, nameEN, thumbnail,
 
   } = req.body;
 
@@ -22,7 +22,7 @@ const createMovie = (req, res, next) => {
     year,
     description,
     image,
-    trailer,
+    trailerLink,
     nameRU,
     nameEN,
     thumbnail,
