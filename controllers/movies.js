@@ -51,7 +51,7 @@ const deleteMovie = (req, res, next) => {
     })
     .then((movie) => {
       if (movie.owner.toString() === req.user._id) {
-        Movie.findByIdAndRemove(_id).then(() => res.send(movie));
+        Movie.findByIdAndRemove(_id).then(() => res.send({ message: 'фильм удалён' }));
       } else {
         throw new ForbiddenError('Нельзя удалять чужой фильм');
       }
@@ -64,7 +64,7 @@ const deleteMovie = (req, res, next) => {
           ),
         );
       } else if (err.name === 'NotFoundError') {
-        next(new NotFoundError(`Фильм с id: ${_id} не найдена`));
+        next(new NotFoundError(`Фильм с id: ${_id} не найден`));
       } else {
         next(err);
       }
