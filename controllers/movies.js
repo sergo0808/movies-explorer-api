@@ -3,8 +3,9 @@ const NotFoundError = require('../errors/NotFoundError');
 const BadRequestError = require('../errors/BadRequestError');
 const ForbiddenError = require('../errors/ForbiddenError');
 
-const getMovie = (_, res, next) => {
-  Movie.find({})
+const getMovie = (req, res, next) => {
+  const { _id } = req.user;
+  Movie.findById(_id)
     .then((movie) => res.send(movie))
     .catch(next);
 };
