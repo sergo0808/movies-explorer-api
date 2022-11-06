@@ -25,12 +25,6 @@ const userValidate = celebrate({
   }),
 });
 
-const userIdValidate = celebrate({
-  params: Joi.object().keys({
-    userId: Joi.string().hex().length(24),
-  }),
-});
-
 const movieValidate = celebrate({
   body: Joi.object().keys({
     country: Joi.string().required(),
@@ -57,7 +51,6 @@ module.exports = {
   authValidate,
   registerValidate,
   userValidate,
-  userIdValidate,
   movieValidate,
   movieIdValidate,
 };
