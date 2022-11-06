@@ -4,8 +4,7 @@ const BadRequestError = require('../errors/BadRequestError');
 const ForbiddenError = require('../errors/ForbiddenError');
 
 const getMovie = (req, res, next) => {
-  const { _id } = req.user;
-  Movie.findById(_id)
+  Movie.findById(req.user._id)
     .then((movie) => res.send(movie))
     .catch(next);
 };
