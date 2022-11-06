@@ -7,6 +7,7 @@ const routes = require('./routes');
 const error = require('./middlewares/error');
 const cors = require('./middlewares/cors');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
+const limiter = require('./middlewares/limiter');
 
 const { PORT = 3000 } = process.env;
 const app = express();
@@ -17,6 +18,7 @@ mongoose.connect('mongodb://localhost:27017/moviesdb', {
 
 app.use(helmet());
 app.use(express.json());
+app.use(limiter);
 
 app.get('/crash-test', () => {
   setTimeout(() => {
