@@ -12,8 +12,8 @@ const authValidate = celebrate({
 const registerValidate = celebrate({
   body: Joi.object().keys({
     name: Joi.string().required().min(2).max(30),
-    password: Joi.string().required(),
     email: Joi.string().required().email(),
+    password: Joi.string().required(),
 
   }),
 });
