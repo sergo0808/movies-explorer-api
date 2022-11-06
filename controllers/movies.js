@@ -47,8 +47,6 @@ const deleteMovie = (req, res, next) => {
             `Передан некорректны id: ${_id} в методы удаления фильма`,
           ),
         );
-      } else if (err.name === 'NotFoundError') {
-        next(new NotFoundError(`Фильм с id: ${_id} не найден`));
       } else {
         next(err);
       }
