@@ -5,6 +5,12 @@ const UnauthorizedError = require('../errors/UnauthorizedError');
 const BadRequestError = require('../errors/BadRequestError');
 
 const userSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    minLength: 2,
+    maxLength: 30,
+    require: true,
+  },
   email: {
     type: String,
     required: true,
@@ -20,12 +26,6 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     select: false,
-  },
-  name: {
-    type: String,
-    minLength: 2,
-    maxLength: 30,
-    require: true,
   },
 
 });

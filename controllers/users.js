@@ -40,7 +40,7 @@ const getCurrentUser = (req, res, next) => {
 
 const createUser = (req, res, next) => {
   const {
-    name, password, email,
+    name, email, password,
   } = req.body;
 
   bcrypt
