@@ -43,12 +43,13 @@ const movieValidate = celebrate({
     thumbnail: Joi.string().required().pattern(urlCheckPattern),
     nameRU: Joi.string().required(),
     nameEN: Joi.string().required(),
+    movieId: Joi.number().required(),
   }),
 });
 
 const movieIdValidate = celebrate({
   params: Joi.object().keys({
-    _id: Joi.string().hex().length(24),
+    movieId: Joi.string().hex().length(24),
   }),
 });
 
