@@ -6,8 +6,8 @@ const {
   movieIdValidate,
 } = require('../middlewares/validation');
 
-router.get('/', getMovie); // Get all cards
-router.post('/', movieValidate, createMovie); // Create new card
-router.delete('/:_id', movieIdValidate, deleteMovie); // Delete card by ID
+router.get('/', getMovie);
+router.post('/', movieValidate, createMovie);
+router.delete('/:_id', movieIdValidate, deleteMovie);
 
 module.exports = router;
