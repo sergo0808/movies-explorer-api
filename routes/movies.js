@@ -8,6 +8,6 @@ const {
 
 router.get('/', getMovie); // Get all cards
 router.post('/', movieValidate, createMovie); // Create new card
-router.delete('/:movieId', movieIdValidate, deleteMovie); // Delete card by ID
+router.delete('/:_id', movieIdValidate, deleteMovie); // Delete card by ID
 
 module.exports = router;
