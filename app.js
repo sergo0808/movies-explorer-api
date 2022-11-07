@@ -18,7 +18,6 @@ mongoose.connect('mongodb://localhost:27017/moviesdb', {
 
 app.use(helmet());
 app.use(express.json());
-app.use(limiter);
 
 app.get('/crash-test', () => {
   setTimeout(() => {
@@ -30,9 +29,9 @@ app.use(requestLogger);
 app.use(routes);
 app.use(errorLogger);
 app.use(errors());
-app.use(error); // centralized error handler
+app.use(error);
+app.use(limiter);
 
 app.listen(PORT, () => {
-  // eslint-disable-next-line no-console
   console.log(`Server started on port ${PORT}`);
 });
