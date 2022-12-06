@@ -1,6 +1,4 @@
 const allowedCors = [
-  'https://api.films.sovickiy.nomoredomains.icu',
-  'http://api.films.sovickiy.nomoredomains.icu',
   'http://localhost:3000/'
 ];
 
