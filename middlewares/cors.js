@@ -1,6 +1,8 @@
 const allowedCors = [
-  'https://api.films.sovickiy.nomoredomains.icu',
-  'http://api.films.sovickiy.nomoredomains.icu',
+  'http://frontend.films.sovickiy.nomoredomains.club/',
+  'https://frontend.films.sovickiy.nomoredomains.club/',
+  'http://localhost:3000',
+  'https://localhost:3000'
 ];
 
 const cors = (req, res, next) => {
