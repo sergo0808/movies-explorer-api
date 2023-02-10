@@ -1,6 +1,6 @@
 const allowedCors = [
-  "https://frontend.dino.sovickiy.nomoredomains.work/",
-  "http://frontend.dino.sovickiy.nomoredomains.work/",
+  "https://frontend.dino.sovickiy.nomoredomains.work",
+  "http://frontend.dino.sovickiy.nomoredomains.work",
   "http://localhost:3000",
   "https://localhost:3000",
 ];
